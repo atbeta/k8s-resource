@@ -24,6 +24,10 @@ spec:
         app: traefik
     spec:
       serviceAccountName: traefik-ingress-controller
+      tolerations:
+        - operator: "Exists"
+      nodeSelector:
+        kubernetes.io/hostname: hetzner-nbg1-1 #指定的node名
       containers:
         - name: traefik
           image: traefik:v2.0
