@@ -4,11 +4,14 @@ metadata:
   name: traefik
 spec:
   ports:
-    - name: web
+    - protocol: TCP
+      name: web
       port: 80
-    - name: websecure
+    - protocol: TCP
+      name: websecure
       port: 443
-    - name: admin
+    - protocol: TCP
+      name: admin
       port: 8080
   selector:
     app: traefik
