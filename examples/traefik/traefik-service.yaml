@@ -6,9 +6,13 @@ metadata:
 spec:
   ports:
     - protocol: TCP
+      name: web
+      port: 80
+    - protocol: TCP
       name: admin
       port: 8080
+    - protocol: TCP
+      name: websecure
+      port: 443
   selector:
-    k8s-app: traefik-ingress-lb
-
-
+    app: traefik
